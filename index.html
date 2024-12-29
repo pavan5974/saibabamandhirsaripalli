@@ -2,32 +2,47 @@
 <html>
 <head>
   <style>
+    /* Set the background video to cover the entire screen */
     body {
-      background-image: url("new img7.jpg");
-      background-size: cover; /* Ensure the image covers the entire viewport */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Prevent the image from repeating */
-      background-attachment: fixed; /* Lock the background image in place */
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
+
+    /* Video background styling */
+    #background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the video covers the entire screen */
+      z-index: -1; /* Ensure the video stays behind the content */
+    }
+
     img {
       width: 470px; /* Fixed width */
       height: 500px; /* Fixed height */
       display: block; /* Ensure images do not align inline */
       margin: 10px auto; /* Center images horizontally */
     }
+
     h1 {
-      color: white;
+      color: black;
       text-align: center;
     }
+
     h2, h3, h4 {
       color: black;
       font-size: x-large;
     }
+
     h5 {
-      color: white;
+      color: black;
       text-align: center;
       font-size: x-large;
     }
+
     .info-box {
       border: 2px solid black;
       border-width: medium;
@@ -36,6 +51,7 @@
       width: 95%;
       background-color: white;
     }
+
     .info-box p {
       margin: 10px 0;
       font-size: x-large;
@@ -44,6 +60,12 @@
   </style>
 </head>
 <body>
+  <!-- Background Video -->
+  <video id="background-video" autoplay muted loop>
+    <source src="c:\Users\pavansai daggu\Downloads\animatedvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
   <h1>WELCOME TO THE SARIPALLI SAIBABA MANDHIR</h1>
   <img src="saibaba pic3.jpg" alt="Saibaba Pic 3">
   <img src="saibaba pic2.jpg" alt="Saibaba Pic 2">
