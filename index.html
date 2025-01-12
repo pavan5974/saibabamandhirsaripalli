@@ -13,46 +13,48 @@
       display: flex; /* Use flexbox for arranging images side by side */
       flex-wrap: wrap; /* Allow wrapping to the next line if needed */
       justify-content: center; /* Center images horizontally */
-      gap: 15px; /* Add space between images */
-      margin: 20px 0; /* Add some vertical spacing around the container */
+      gap: 20px; /* Add space between images */
+      margin: 30px 0; /* Add some vertical spacing around the container */
     }
     .image-container img {
       width: 100%; /* Make images take the full width of their container */
-      max-width: 300px; /* Set a maximum width for better visibility */
+      max-width: 400px; /* Set a maximum width for better visibility */
       height: auto; /* Maintain aspect ratio */
-      border: 2px solid white; /* Add a border around the images */
-      border-radius: 10px; /* Add rounded corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+      border: 3px solid white; /* Add a thicker border around the images */
+      border-radius: 15px; /* Add rounded corners */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a shadow for better visibility */
     }
     h1 {
       color: white;
       text-align: center;
+      font-size: 2.5em; /* Increase font size */
     }
     h2, h3, h4 {
       color: black;
-      font-size: x-large;
+      font-size: 1.8em; /* Increase font size */
     }
     h5 {
       color: white;
       text-align: center;
-      font-size: x-large;
+      font-size: 1.8em; /* Increase font size */
     }
     h6 {
       color: white;
       text-align: center;
-      font-size: x-large;
+      font-size: 1.6em; /* Increase font size */
     }
     .info-box {
-      border: 2px solid black;
+      border: 3px solid black; /* Thicker border */
       border-width: medium;
-      padding: 10px; /* Set padding to 10px */
-      margin: 20px auto;
+      padding: 15px; /* Increase padding */
+      margin: 30px auto;
       width: 95%;
       background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
     }
     .info-box p {
-      margin: 10px 0;
-      font-size: x-large;
+      margin: 15px 0;
+      font-size: 1.6em; /* Increase font size */
       text-align: center;
     }
     table {
@@ -63,17 +65,19 @@
       border: 1px solid black;
     }
     th, td {
-      padding: 10px;
+      padding: 15px; /* Increase padding */
+      font-size: 1.4em; /* Increase font size */
       text-align: center;
     }
     #toggleTableBtn {
       margin: 20px auto;
       display: block;
-      font-size: large;
+      font-size: 1.2em; /* Increase font size */
       background-color: blue; /* Set the background color to blue */
       color: white; /* Set the text color to white */
-      padding: 10px 20px; /* Add padding for better appearance */
+      padding: 12px 25px; /* Add padding for better appearance */
       border: none; /* Remove border */
+      border-radius: 8px; /* Add rounded corners */
       cursor: pointer; /* Add pointer cursor on hover */
     }
     #toggleTableBtn:hover {
@@ -82,7 +86,13 @@
     /* Responsive Styles */
     @media (max-width: 600px) {
       .image-container img {
-        max-width: 90%; /* Allow images to be larger on small screens */
+        max-width: 100%; /* Allow images to be larger on small screens */
+      }
+      .info-box {
+        padding: 10px; /* Adjust padding */
+      }
+      .info-box p {
+        font-size: 1.4em; /* Adjust font size for smaller screens */
       }
     }
   </style>
@@ -174,6 +184,7 @@
   </script>
 </body>
 </html>
+
 
 
 
