@@ -1,0 +1,194 @@
+<html>
+<head>
+  <style>
+    body {
+      background-image: url("snowpic1.jpg");
+      background-size: cover; /* Ensure the image covers the entire viewport */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      background-attachment: fixed; /* Lock the background image in place */
+    }
+    .image-wrapper {
+      border: 5px solid black; /* Outer black border around all images */
+      padding: 10px; /* Add some padding between the border and the images */
+      display: inline-block; /* Ensure proper alignment */
+      background-color: pink; /* Optional: Add a white background for contrast */
+      margin: 20px auto; /* Center the wrapper and add margin */
+    }
+    .image-container {
+      display: flex; /* Use flexbox for arranging images side by side */
+      flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+      justify-content: center; /* Center images horizontally */
+      gap: 20px; /* Add space between images */
+    }
+    .image-container img {
+      width: 100%; /* Make images take the full width of their container */
+      max-width: 400px; /* Set a maximum width for better visibility */
+      height: auto; /* Maintain aspect ratio */
+      border: 3px solid white; /* Add a thicker border around the images */
+      border-radius: 15px; /* Add rounded corners */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a shadow for better visibility */
+    }
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: 2.5em; /* Increase font size */
+    }
+    h2, h3, h4 {
+      color: black;
+      font-size: 1.8em; /* Increase font size */
+    }
+    h5 {
+      color: white;
+      text-align: center;
+      font-size: 1.8em; /* Increase font size */
+    }
+    h6 {
+      color: white;
+      text-align: center;
+      font-size: 1.6em; /* Increase font size */
+    }
+    .info-box {
+      border: 3px solid black; /* Thicker border */
+      border-width: medium;
+      padding: 15px; /* Increase padding */
+      margin: 30px auto;
+      width: 95%;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    }
+    .info-box p {
+      margin: 15px 0;
+      font-size: 1.6em; /* Increase font size */
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 15px; /* Increase padding */
+      font-size: 1.4em; /* Increase font size */
+      text-align: center;
+    }
+    #toggleTableBtn {
+      margin: 20px auto;
+      display: block;
+      font-size: 1.2em; /* Increase font size */
+      background-color: blue; /* Set the background color to blue */
+      color: white; /* Set the text color to white */
+      padding: 12px 25px; /* Add padding for better appearance */
+      border: none; /* Remove border */
+      border-radius: 8px; /* Add rounded corners */
+      cursor: pointer; /* Add pointer cursor on hover */
+    }
+    #toggleTableBtn:hover {
+      background-color: darkblue; /* Change background on hover */
+    }
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      .image-container img {
+        max-width: 100%; /* Allow images to be larger on small screens */
+      }
+      .info-box {
+        padding: 10px; /* Adjust padding */
+      }
+      .info-box p {
+        font-size: 1.4em; /* Adjust font size for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>WELCOME TO THE SARIPALLI SAIBABA MANDHIR</h1>
+
+  <!-- Image Wrapper -->
+  <div class="image-wrapper">
+    <!-- Image Container -->
+    <div class="image-container">
+      <img src="saibaba new pic3.jpg" alt="saibaba pic New">
+      <img src="saibaba pic11.jpg" alt="saibaba pic 11">
+      <img src="saibaba new pic4.jpg" alt="saibaba pic 4">
+      <img src="saibaba pic14.jpg" alt="saibaba pic 14">
+      <img src="saibaba temple pic1.jpg" alt="saibaba temple pic 1">
+    </div>
+  </div>
+
+  <h5>Schedule For Events and Aarthi Timings:</h5>
+  <div class="info-box">
+    <h2>Aarthi Timings:</h2>
+    <p>Kakad Aarthi - 5:00 A.M</p>
+    <p>Madhyaan Aarthi - 12:00 P.M</p>
+    <p>Dhoop Aarthi - 6:00 P.M (Aarthi Time Depends Upon Sunset)</p>
+    <p>Shej Aarthi - 8:00 P.M</p>
+  </div>
+  <div class="info-box">
+    <h3>SaiBaba Abhishekam Updates:</h3>
+    <p>Every Thursday Abishekam Starts at 7:30 A.M</p>
+  </div>
+  <div class="info-box">
+    <h4>Upcoming Events:</h4>
+    <p>If any upcoming events are scheduled, they will be updated in this box.</p>
+  </div>
+
+  <!-- New Code Section -->
+  <h6>Naamam Timings Information:</h6>
+  <button id="toggleTableBtn">Show Naamam Information</button>
+  <div class="info-box" id="naamamInfoBox" style="display: none;">
+    <table>
+      <thead>
+        <tr>
+          <th>Serial No</th>
+          <th>Name</th>
+          <th>Naamam Timings</th>
+          <th>Cell No</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const toggleTableBtn = document.getElementById('toggleTableBtn');
+    const naamamInfoBox = document.getElementById('naamamInfoBox');
+
+    toggleTableBtn.addEventListener('click', () => {
+      if (naamamInfoBox.style.display === 'none' || naamamInfoBox.style.display === '') {
+        naamamInfoBox.style.display = 'block';
+        toggleTableBtn.textContent = 'Hide Naamam Information';
+      } else {
+        naamamInfoBox.style.display = 'none';
+        toggleTableBtn.textContent = 'Show Naamam Information';
+      }
+    });
+  </script>
+</body>
+</html>
