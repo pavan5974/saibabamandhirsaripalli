@@ -107,7 +107,7 @@
       }
 
       // Redirect to the second page upon successful login
-      window.location.href = "file:///C:/Users/pavansai%20daggu/Downloads/index4.html"; // Update to the correct path
+      window.location.href = "file:///C:/Users/pavansai%20daggu/Downloads/index.html"; // Update to the correct path
     });
   </script>
 </body>
