@@ -29,6 +29,56 @@
       margin-top: 20px;
     }
 
+    /* 🎯 Login Box Styling */
+    #loginBox {
+      text-align: center;
+      margin-top: 100px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #loginBox h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    #loginBox input {
+      width: 80%;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      font-size: 1.1em;
+    }
+
+    #loginBox button {
+      width: 85%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff758c;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    #loginBox button:hover {
+      background-color: darkred;
+      transform: scale(1.05);
+    }
+
+    /* 🌟 Content Box */
+    .content {
+      display: none;
+    }
+
     /* 📸 Image Gallery */
     .image-container {
       display: flex;
@@ -138,76 +188,102 @@
 </head>
 <body>
 
-  <!-- 🌟 Title -->
-  <h1>WELCOME TO THE SARIPALLI SAIBABA MANDHIR</h1>
-
-  <!-- 📸 Image Gallery -->
-  <div class="image-container">
-    <img src="saibaba new pic3.jpg" alt="Saibaba Pic New">
-    <img src="saibaba pic11.jpg" alt="Saibaba Pic 11">
-    <img src="saibaba new pic4.jpg" alt="Saibaba Pic 4">
-    <img src="saibaba pic14.jpg" alt="Saibaba Pic 14">
-    <img src="saibaba temple pic1.jpg" alt="Saibaba Temple Pic 1">
+  <!-- 🌟 Login Section -->
+  <div id="loginBox">
+    <h1>Login to Access</h1>
+    <form id="loginForm">
+      <input type="text" id="loginId" placeholder="Enter Login ID" required><br>
+      <input type="password" id="password" placeholder="Enter Password" required><br>
+      <button type="submit">Login</button>
+    </form>
   </div>
 
-  <!-- 🕉️ Aarthi Timings -->
-  <div class="info-box">
-    <h2>Aarthi Timings:</h2>
-    <p>Kakad Aarthi - 5:00 A.M</p>
-    <p>Madhyaan Aarthi - 12:00 P.M</p>
-    <p>Dhoop Aarthi - 6:00 P.M (Aarthi Time Depends Upon Sunset)</p>
-    <p>Shej Aarthi - 8:00 P.M</p>
+  <!-- 🌟 Content Section -->
+  <div class="content">
+    <h1>WELCOME TO THE SARIPALLI SAIBABA MANDHIR</h1>
+
+    <!-- 📸 Image Gallery -->
+    <div class="image-container">
+      <img src="saibaba new pic3.jpg" alt="Saibaba Pic New">
+      <img src="saibaba pic11.jpg" alt="Saibaba Pic 11">
+      <img src="saibaba new pic4.jpg" alt="Saibaba Pic 4">
+      <img src="saibaba pic14.jpg" alt="Saibaba Pic 14">
+      <img src="saibaba temple pic1.jpg" alt="Saibaba Temple Pic 1">
+    </div>
+
+    <!-- 🕉️ Aarthi Timings -->
+    <div class="info-box">
+      <h2>Aarthi Timings:</h2>
+      <p>Kakad Aarthi - 5:00 A.M</p>
+      <p>Madhyaan Aarthi - 12:00 P.M</p>
+      <p>Dhoop Aarthi - 6:00 P.M (Aarthi Time Depends Upon Sunset)</p>
+      <p>Shej Aarthi - 8:00 P.M</p>
+    </div>
+
+    <!-- 🔱 Abhishekam Updates -->
+    <div class="info-box">
+      <h3>SaiBaba Abhishekam Updates:</h3>
+      <p>Every Thursday Abishekam Starts at 7:30 A.M</p>
+    </div>
+
+    <!-- 🎊 Upcoming Events -->
+    <div class="info-box">
+      <h4>Upcoming Events:</h4>
+      <p>If any upcoming events are scheduled, they will be updated in this box.</p>
+    </div>
+
+    <!-- 🔢 Naamam Timings Table Box -->
+    <div class="table-box" id="naamamInfoBox">
+      <h2>Naamam Information</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Serial No</th>
+            <th>Name</th>
+            <th>Naamam Timings</th>
+            <th>Cell No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td></td><td></td><td></td></tr>
+          <tr><td>2</td><td></td><td></td><td></td></tr>
+          <tr><td>3</td><td></td><td></td><td></td></tr>
+          <tr><td>4</td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 📜 JavaScript for Toggle Table -->
+    <button id="toggleTableBtn">Hide Naamam Information</button>
+    <script>
+      const toggleTableBtn = document.getElementById('toggleTableBtn');
+      const naamamInfoBox = document.getElementById('naamamInfoBox');
+
+      toggleTableBtn.addEventListener('click', () => {
+        if (naamamInfoBox.style.display === 'none' || naamamInfoBox.style.display === '') {
+          naamamInfoBox.style.display = 'block';
+          toggleTableBtn.textContent = 'Hide Naamam Information';
+        } else {
+          naamamInfoBox.style.display = 'none';
+          toggleTableBtn.textContent = 'Show Naamam Information';
+        }
+      });
+
+      const loginForm = document.getElementById('loginForm');
+      loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const loginId = document.getElementById('loginId').value;
+        const password = document.getElementById('password').value;
+
+        if (loginId === 'saibabamandhir' && password === '11223344') {
+          document.getElementById('loginBox').style.display = 'none';
+          document.querySelector('.content').style.display = 'block';
+        } else {
+          alert('Incorrect Login ID or Password');
+        }
+      });
+    </script>
   </div>
-
-  <!-- 🔱 Abhishekam Updates -->
-  <div class="info-box">
-    <h3>SaiBaba Abhishekam Updates:</h3>
-    <p>Every Thursday Abishekam Starts at 7:30 A.M</p>
-  </div>
-
-  <!-- 🎊 Upcoming Events -->
-  <div class="info-box">
-    <h4>Upcoming Events:</h4>
-    <p>If any upcoming events are scheduled, they will be updated in this box.</p>
-  </div>
-
-  <!-- 🔢 Naamam Timings Table Box -->
-  <div class="table-box" id="naamamInfoBox">
-    <h2>Naamam Information</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Serial No</th>
-          <th>Name</th>
-          <th>Naamam Timings</th>
-          <th>Cell No</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td></td><td></td><td></td></tr>
-        <tr><td>2</td><td></td><td></td><td></td></tr>
-        <tr><td>3</td><td></td><td></td><td></td></tr>
-        <tr><td>4</td><td></td><td></td><td></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- 📜 JavaScript for Toggle Table -->
-  <button id="toggleTableBtn">Hide Naamam Information</button>
-  <script>
-    const toggleTableBtn = document.getElementById('toggleTableBtn');
-    const naamamInfoBox = document.getElementById('naamamInfoBox');
-
-    toggleTableBtn.addEventListener('click', () => {
-      if (naamamInfoBox.style.display === 'none' || naamamInfoBox.style.display === '') {
-        naamamInfoBox.style.display = 'block';
-        toggleTableBtn.textContent = 'Hide Naamam Information';
-      } else {
-        naamamInfoBox.style.display = 'none';
-        toggleTableBtn.textContent = 'Show Naamam Information';
-      }
-    });
-  </script>
 
 </body>
 </html>
